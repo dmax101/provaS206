@@ -1,6 +1,6 @@
 ![Cypress.io](https://www.cypress.io/static/33498b5f95008093f5f94467c61d20ab/ac1e1/cypress-logo.webp)
 
-# Exercício Cypress - Teste de UI
+# Exercício Cypress - Prova
 
 | Matricula | Nome           |
 | :-------: | -------------- |
@@ -41,7 +41,3 @@ Para gerar um relatório e de quebra o vídeo do teste rodando no seu computador
 ```bash
 .\node_modules\.bin\cypress run --spec .\cypress\integration\0-inatel\prova.spec.js --browser chrome --reporter mochawesome
 ```
-
-**_Vídeo_**: Assista o relatório [aqui](./cypress/videos/0-inatel/autoPractice.spec.js.mp4).
-
-**_Relatório_**: Acesse o relatório [aqui](./mochawesome-report/mochawesome.html).
