@@ -1,0 +1,182 @@
+{
+  "stats": {
+    "suites": 2,
+    "tests": 4,
+    "passes": 4,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-06-07T00:02:46.212Z",
+    "end": "2022-06-07T00:03:00.462Z",
+    "duration": 14250,
+    "testsRegistered": 4,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "c049c0fb-1514-431b-aceb-3afd72179aed",
+      "title": "",
+      "fullFile": "cypress/integration/0-inatel/prova.spec.js",
+      "file": "cypress/integration/0-inatel/prova.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "ecf5b01d-2baf-445a-be46-5f0be882a64f",
+          "title": "XYZ Bank suite test 01",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "deve ser possível realizar o login com o usuário Harry Potter",
+              "fullTitle": "XYZ Bank suite test 01 deve ser possível realizar o login com o usuário Harry Potter",
+              "timedOut": null,
+              "duration": 2763,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"https://www.globalsqa.com/angularJs-protractor/BankingProject/#/login\");\ncy.get(\".borderM > :nth-child(1) > .btn\").click();\ncy.get(\"#userSelect\").select(\"Harry Potter\");\ncy.get(\"form.ng-valid > .btn\").click();",
+              "err": {},
+              "uuid": "7cbaa193-a228-4b07-8e83-887e54c69e89",
+              "parentUUID": "ecf5b01d-2baf-445a-be46-5f0be882a64f",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "7cbaa193-a228-4b07-8e83-887e54c69e89"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 2763,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "eb9f412e-802d-4f15-8f27-352b8486b05d",
+          "title": "XYZ Bank suite test 02",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "dado que o usuário Harry Potter esteja logado deve-se tentar retirar um valor maior do que tem na conta!",
+              "fullTitle": "XYZ Bank suite test 02 dado que o usuário Harry Potter esteja logado deve-se tentar retirar um valor maior do que tem na conta!",
+              "timedOut": null,
+              "duration": 3096,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('[ng-class=\"btnClass3\"]').click();\ncy.get(\".form-control\").type(generateRandomInteger());\ncy.get(\"form.ng-dirty > .btn\").click();\ncy.get(\".error\").should(\"contain\", \"Transaction Failed. You can not withdraw amount more than the balance.\");",
+              "err": {},
+              "uuid": "e71c9783-dd4d-4e95-b04f-880bfc426843",
+              "parentUUID": "eb9f412e-802d-4f15-8f27-352b8486b05d",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "dado que o usuário Harry Potter esteja logado ele deve poder realizar um depósito em sua conta",
+              "fullTitle": "XYZ Bank suite test 02 dado que o usuário Harry Potter esteja logado ele deve poder realizar um depósito em sua conta",
+              "timedOut": null,
+              "duration": 2222,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('[ng-class=\"btnClass2\"]').click();\nlet valor = generateRandomInteger();\ncy.get(\".form-control\").type(valor);\ncy.get(\"form.ng-dirty > .btn\").click();\ncy.get(\".borderM > :nth-child(3) > :nth-child(2)\").should(\"contain\", valor);",
+              "err": {},
+              "uuid": "1e870188-2d9e-4c26-81f0-ebd1077beb20",
+              "parentUUID": "eb9f412e-802d-4f15-8f27-352b8486b05d",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "dado que o usuário Harry Potter esteja logado e tenha depositado $500 ele poderá retirar todo o saldo.",
+              "fullTitle": "XYZ Bank suite test 02 dado que o usuário Harry Potter esteja logado e tenha depositado $500 ele poderá retirar todo o saldo.",
+              "timedOut": null,
+              "duration": 3580,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('[ng-class=\"btnClass2\"]').click();\ncy.get(\".form-control\").type(500);\ncy.get(\"form.ng-dirty > .btn\").click();\ncy.get(\".borderM > :nth-child(3) > :nth-child(2)\").should(\"contain\", 500);\ncy.get('[ng-class=\"btnClass3\"]').click();\ncy.wait(1000);\ncy.get(\".form-control\").type(\"500\");\ncy.get(\"form.ng-dirty > .btn\").click();\ncy.get(\".borderM > :nth-child(3) > :nth-child(2)\").should(\"contain\", 0);",
+              "err": {},
+              "uuid": "f9e2acf0-7aac-4eff-b01a-010e1f308807",
+              "parentUUID": "eb9f412e-802d-4f15-8f27-352b8486b05d",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "e71c9783-dd4d-4e95-b04f-880bfc426843",
+            "1e870188-2d9e-4c26-81f0-ebd1077beb20",
+            "f9e2acf0-7aac-4eff-b01a-010e1f308807"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 8898,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "./cypress/results",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
