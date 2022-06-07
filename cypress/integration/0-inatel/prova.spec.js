@@ -20,7 +20,7 @@ describe("XYZ Bank suite test 02", () => {
     cy.get("form.ng-valid > .btn").click();
   });
 
-  it("dado que o usuário Harry Potter esteja logado deve-se tentar retirar um valor maior do que tem na conta!", () => {
+  it("dado que o usuário Harry Potter esteja logado deve-se tentar retirar um valor maior do que tem na conta e receber uma mensagem de erro!", () => {
     cy.get('[ng-class="btnClass3"]').click();
     cy.get(".form-control").type(generateRandomInteger());
     cy.get("form.ng-dirty > .btn").click();
